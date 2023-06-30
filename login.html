@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_login_cadastro.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Estilos do modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-image: url('images/imagem.jpg');">
+   <div class="box">
+    <div class="container">
+
+        <div class="top">
+            <h2>☬ˢAVIATOR-HACKER 1.7.0☬<h2> 
+
+            <header>entrar na conta</header>
+        </div>
+
+        <div class="input-field">
+            <input type="text" class="input" placeholder="Email do usuário" id="mail">
+            <i class='bx bx-user' ></i>
+        </div>
+
+        <div class="input-field">
+            <input type="password" class="input" placeholder="Senha" id="pass">
+            <i class='bx bx-lock-alt'></i>
+        </div>
+
+        <div class="input-field">
+            <input type="submit" class="submit" value="Login" id="cadastrarBtn" onclick="login()">
+        </div>
+
+        <div class="two-col">
+            <div class="two">
+                <label onclick="window.location.href = 'home.html'"><a href="#">Não possui uma conta? criar conta</a></label>
+            </div>
+        </div>
+    </div>
+</div>  
+
+<!-- Modal para exibir erros -->
+<div id="errorModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="errorText"></p>
+    </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>  
+<script src="js/firebase.js"></script>
+<script src="js/script_login.js"></script>
+<script>
+    function login() {
+        var email = document.getElementById("mail").value;
+        var password = document.getElementById("pass").value;
+        var errorModal = document.getElementById("errorModal");
+        var errorText = document.getElementById("errorText");
+        
+        if (email === "" || password === "") {
+            errorText.textContent = "Por favor, preencha todos os campos.";
+            errorModal.style.display = "block";
+        } else {
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then(function() {
+                    // Login bem-sucedido, redirecionar para a página desejada
+                    window.location.href = "home.html";
+                })
+                .catch(function(error) {
+                    // Exibir mensagem de erro do Firebase
+                    errorText.textContent = error.message;
+                    errorModal.style.display = "block";
+                });
+        }
+    }
+    
+    function closeModal() {
+        var errorModal = document.getElementById("errorModal");
+        errorModal.style.display = "none";
+    }
+</script>
+</body>
+</html>

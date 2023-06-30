@@ -1,0 +1,123 @@
+User
+<!DOCTYPE html>
+<html>
+<head>
+  <title>confirme o seu pagamento</title>
+  <style>
+    /* Estilos CSS */
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .payment-option {
+      margin-bottom: 20px;
+    }
+
+    .payment-option img {
+      max-width: 200px;
+      margin-bottom: 10px;
+    }
+
+    .payment-option input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .payment-option button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .payment-option button:hover {
+      background-color: #45a049;
+    }
+
+    .payment-message {
+      margin-top: 20px;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .operator-button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Tela de Pagamentos</h2>
+
+    <div class="payment-option">
+      <img src="data:image/png;base64,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" alt="Emola Logo">
+      <input type="number" id="emola-number" placeholder="Digite o número que enviou o valor">
+      <button onclick="checkEmolaPayment()">Verificar Pagamento</button>
+    </div>
+
+    <div class="payment-option">
+      <img src="data:image/png;base64,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" alt="M-Pesa Logo">
+      <input type="number" id="mpesa-number" placeholder="Digite o número que enviou o valor">
+      <button onclick="checkMpesaPayment()">Verificar Pagamento</button>
+    </div>
+
+    <div class="payment-message" id="payment-message"></div>
+
+    <div class="operator-button">
+      <button onclick="contactOperator()">Falar com Operador</button>
+    </div>
+  </div>
+
+  <script>
+    // Função para verificar o pagamento via Emola
+    function checkEmolaPayment() {
+      var emolaNumber = document.getElementById("emola-number").value;
+
+      if (emolaNumber) {
+        var message = "Não recebemos nenhum valor correspondente a 500MZN através do número " + emolaNumber + ". Por favor, transfira o valor para que possa usar nossos serviços.";
+        document.getElementById("payment-message").textContent = message;
+      }
+    }
+
+    // Função para verificar o pagamento via M-Pesa
+    function checkMpesaPayment() {
+      var mpesaNumber = document.getElementById("mpesa-number").value;
+
+      if (mpesaNumber) {
+        var message = "Não recebemos nenhum valor correspondente a 500MZN através do número " + mpesaNumber + ". Por favor, transfira o valor para que possa usar nossos serviços.";
+        document.getElementById("payment-message").textContent = message;
+      }
+    }
+
+    // Função para entrar em contato com o operador
+    function contactOperator() {
+      window.open("https://wa.me/258876219853", "_blank");
+    }
+  </script>
+</body>
+</html>
