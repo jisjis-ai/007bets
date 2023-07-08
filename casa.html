@@ -7,7 +7,6 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #000000;
       color: white;
     }
     
@@ -163,12 +162,12 @@
 </head>
 <body>
   <div class="user-info">
-    <span class="user-info-icon">&#x263A;</span>
+    <span class="user-info-icon"> 
     <span>Usuário autenticado</span>
   </div>
 
   <div class="color-select-container">
-    <label for="background-color">Selecionar cor de fundo:</label>
+    <label for="background-color" class="color-select-label">Selecionar cor de fundo:</label>
     <select id="background-color" class="color-select">
       <option value="#007bff">Azul escuro</option>
       <option value="#000000">Preto</option>
@@ -223,7 +222,7 @@
   <div class="dialog-container" id="dialog-container">
     <div class="dialog-content">
       <h3>Bem-vindo ao nosso bot!</h3>
-      <p>Embora o bot esteja sempre disponível para uso, é sempre importante verificar as condições do mercado. Nossobot tem uma taxa de acerto de 98%, caso o bot seja usado com sabedoria ele te gerará uma receita inflável, mais caso ele seja usado por pessoas sem nenhum conhecimento do bot e do próprio jogo ele te trará falência, então não culpe o bot pelas perdas, agente não se responsabiliza das perdas mais sim do funcionamento do bot, então culpe a si mesmo por não ter verificado as condições do mercado.</p>
+      <p>Embora obot esteja sempre disponível para uso, é sempre importante verificar as condições do mercado. Nosso bot tem uma taxa de acerto de 98%, caso o bot seja usado com sabedoria, ele gerará uma receita inflável. No entanto, se for usado por pessoas sem nenhum conhecimento do bot e do próprio jogo, pode levar à falência. Portanto, não culpe o bot pelas perdas, pois não nos responsabilizamos pelas perdas, mas sim pelo funcionamento do bot. Por isso, é importante verificar as condições do mercado antes de tomar decisões.</p>
       <div class="dialog-buttons">
         <button class="dialog-button" onclick="closeDialog()">Fechar</button>
       </div>
@@ -352,6 +351,11 @@
 
     window.onload = function() {
       openDialog();
+      var colorSelect = document.getElementById("background-color");
+      colorSelect.addEventListener("change", function() {
+        var selectedColor = colorSelect.value;
+        document.body.style.backgroundColor = selectedColor;
+      });
     };
 
     function showNextTime() {
