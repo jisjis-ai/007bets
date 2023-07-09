@@ -1,3 +1,4 @@
+
 <html>
 <head>
     <title>Ludiflex | hacker bets</title>
@@ -7,6 +8,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #000000;
       color: white;
     }
     
@@ -169,7 +171,7 @@
   <div class="color-select-container">
     <label for="background-color" class="color-select-label">Selecionar cor de fundo:</label>
     <select id="background-color" class="color-select">
-      <option value="#007bff">Azul escuro</option>
+      <option value="#00008B">Azul escuro</option>
       <option value="#000000">Preto</option>
       <option value="#FFFFFF">Branco</option>
     </select>
@@ -210,19 +212,38 @@
       <button onclick="generateTimes()">Gerar</button>
     </div>
     
-    <div class="generated-times"></div>
+    <div class="generated-times">
+      <style>
+        h3 {
+          text-align: center;
+        }
+      </style>
+      
+      <h3>
+      
+        _____________ ENMTRADAS DE  Velas de 2.00X {A} 5.00X_____________
+      </h3>
       <div id="times-1" class="times-container"></div>
     </div>
     
     <div class="generated-times">
-      <div id="times-2" class="times-container"></div>
+  
+<style>
+  h3 {
+    text-align: center;
+  }
+</style>
+
+<h3>
+    _____________ ENTRADAS DE Velas de 1.50X {A} 1.80X_____________
+</h3><div id="times-2" class="times-container"></div>
     </div>
   </div>
 
   <div class="dialog-container" id="dialog-container">
     <div class="dialog-content">
-      <h3>Bem-vindo ao nosso bot!</h3>
-      <p>Embora obot esteja sempre disponível para uso, é sempre importante verificar as condições do mercado. Nosso bot tem uma taxa de acerto de 98%, caso o bot seja usado com sabedoria, ele gerará uma receita inflável. No entanto, se for usado por pessoas sem nenhum conhecimento do bot e do próprio jogo, pode levar à falência. Portanto, não culpe o bot pelas perdas, pois não nos responsabilizamos pelas perdas, mas sim pelo funcionamento do bot. Por isso, é importante verificar as condições do mercado antes de tomar decisões.</p>
+      <h3Bem-vindo ao nosso bot!</h3>
+      <p>Embora o bot esteja sempre disponível para uso, é sempre importante verificar as condições do mercado. Nosso bot tem uma taxa de acerto de 98%, caso o bot seja usado com sabedoria, ele gerará uma receita inflável. No entanto, se for usado por pessoas sem nenhum conhecimento do bot e do próprio jogo, pode levar à falência. Portanto, não culpe o bot pelas perdas, pois não nos responsabilizamos pelas perdas, mas sim pelo funcionamento do bot. Por isso, é importante verificar as condições do mercado antes de tomar decisões.</p>
       <div class="dialog-buttons">
         <button class="dialog-button" onclick="closeDialog()">Fechar</button>
       </div>
@@ -356,6 +377,8 @@
         var selectedColor = colorSelect.value;
         document.body.style.backgroundColor = selectedColor;
       });
+
+      showNextTime(); // Chama a função showNextTime após o carregamento da página
     };
 
     function showNextTime() {
