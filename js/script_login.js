@@ -14,7 +14,7 @@ cadastrarBtn.addEventListener('click', function() {
       console.log('Usuário logado:', user);
 
       // Redirecionar o usuário para index.html
-      window.location.href = "casa.html";
+      window.location.href = "PAGO.html";
     })
     .catch(function(error) {
       // Ocorreu um erro durante o login
