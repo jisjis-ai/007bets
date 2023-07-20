@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ja ouviu falar da hacker bets? ta na cara de que de coisas boas voce nao sabe  deixe apresentalo o futuro no presente ,HACKER BETS E O MAIOR E MELHOR BOT DO MERCADO COM UMA TAXA DE ACERTIVIDADE BEM ELEVADA  COM MAIS DE 8621 USUARIOS E ESPERANDO VOCE PRA SER 8622 USUARIOS TA NA HORA DE MATAR SUA POBRESA SEJA RICO PORQUE NINGUEM RESPEITA POBRE ESSA E A FRASE DO MESTRE.</title>
+  <title>Loading | HackerBets</title>
   <style>
     body {
-      background-color: #000;
-      color: #00FF00;
-      font-family: monospace;
-      text-align: center;
-      padding: 100px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    h1 {
-      font-size: 40px;
-      margin-bottom: 50px;
+    .loader-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .matrix {
+    .loader {
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid #007bff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    .loading-text {
       font-size: 20px;
-      line-height: 20px;
-      position: relative;
-      animation: matrix-effect 10s infinite;
+      color: #007bff;
     }
 
-    @keyframes matrix-effect {
+    @keyframes spin {
       0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
+        transform: rotate(0deg);
       }
       100% {
-        opacity: 1;
+        transform: rotate(360deg);
       }
     }
   </style>
-  <script>
-    setTimeout(function() {
-      window.location.href = "login.html";
-    }, 10000);
-  </script>
 </head>
 <body>
-  <h1>loand...</h1>
-  <div class="matrix">
-    <pre>
-      ██████╗ ██╗   ██╗███████╗███████╗██████╗ ██╗   ██╗███╗   ██╗██╗   ██╗███████╗██████╗
-      ██╔══██╗██║   ██║██╔════╝██╔════╝██╔══██╗██║   ██║████╗  ██║██║   ██║██╔════╝██╔══██╗
-      ██████╔╝██║   ██║███████╗█████╗  ██████╔╝██║   ██║██╔██╗ ██║██║   ██║█████╗  ██████╔╝
-      ██╔═══╝ ██║   ██║╚════██║██╔══╝  ██╔══██╗██║   ██║██║╚██╗██║██║   ██║██╔══╝  ██╔══██╗
-      ██║     ╚██████╔╝███████║███████╗██║  ██║╚██████╔╝██║ ╚████║╚██████╔╝███████╗██║  ██║
-      ╚═╝      ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝
-    </pre>
+  <div class="loader-container">
+    <div class="loader"></div>
+    <h1 class="loading-text">Carregando...</h1>
   </div>
+
+  <script>
+    setTimeout(function() {
+      window.location.href = 'login.html';
+    }, 5000); // Redireciona após 10 segundos
+  </script>
 </body>
 </html>
