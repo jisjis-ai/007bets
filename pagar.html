@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Conta no Bot 99% de Assertividade</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        .info {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .numbers {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .number {
+            margin: 5px 0;
+        }
+
+        .number span {
+            font-size: 16px;
+        }
+
+        .number strong {
+            font-size: 20px;
+            color: #007bff;
+        }
+
+        .transfer-form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 18px;
+        }
+
+        .form-group input[type="tel"],
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Criação de Conta</header>
+        <div class="info">
+            <p>Transfira um montante de 600MZN para um dos números abaixo:</p>
+        </div>
+        <div class="numbers">
+            <div class="number">
+                <span>M-Pesa:</span>
+                <strong>+258 858 108 052</strong>
+                <span>Nome: Dinilson</span>
+            </div>
+            <div class="number">
+                <span>Movitel emola:</span>
+                <strong>+258 876 219 853</strong>
+                <span>Nome: Joaquim</span>
+            </div>
+        </div>
+        <div class="info">
+            <p>Após a transferência, insira o número utilizado e o comprovante:</p>
+        </div>
+        <form class="transfer-form">
+            <div class="form-group">
+                <label for="phone">Número de telefone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="proof">Comprovante:</label>
+                <input type="file" id="proof" name="proof" accept="image/*" required>
+            </div>
+            <button type="button" onclick="sendWhatsAppMessage()">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function sendWhatsAppMessage() {
+            const phoneNumber = "258876219853"; // Replace with your WhatsApp number
+            const message = "Envie o comprovante do pagamento em formato de foto completa.\nNúmero utilizado: " + document.getElementById("phone").value;
+            const waLink = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+
+            window.open(waLink, "_blank");
+        }
+    </script>
+</body>
+</html>
