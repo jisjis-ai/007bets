@@ -1,89 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
-*{
-    font-family: 'poppins' ,sans-serif;
-}
-body{
+
+body {
+    font-family: 'Nunito', sans-serif;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    
+    background-color: #f2f2f2; /* Soft background color */
+    /* Add your preferred background image here */
 }
-.box{
+
+.box {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
-}
-.container{
-    width: 350px;
-    display: flex;
-    flex-direction: column;
-    padding: 0 15px 0 15px;
-    
-}
-span{
-    color: #fff;
-    font-size: small;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0 10px 0;
-}
-header{
-    color: #fff;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0 10px 0;
+    height: 100vh;
+    margin: 0; /* Reset default margin for the body */
 }
 
-.input-field .input{
-    height: 45px;
-    width: 87%;
-    border: none;
-    border-radius: 30px;
-    color: #fff;
-    font-size: 15px;
-    padding: 0 0 0 45px;
-    background: rgba(255,255,255,0.1);
-    outline: none;
+.container {
+    width: 450px; /* Increased container width for a more spacious feel */
+    max-width: 90%;
+    margin: 30px auto; /* Center the container and add some spacing */
+    background-color: #fff; /* White background */
+    border-radius: 10px;
+    padding: 40px; /* Increased padding for better spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
-i{
-    position: relative;
-    top: -33px;
-    left: 17px;
-    color: #fff;
+
+header {
+    color: #333;
+    font-size: 36px; /* Slightly increased font size for the header */
+    text-align: center; /* Center the header text */
+    margin-bottom: 40px; /* Added more spacing below the header */
 }
-::-webkit-input-placeholder{
-    color: #fff;
-}
-.submit{
-    border: none;
-    border-radius: 30px;
-    font-size: 15px;
-    height: 45px;
-    outline: none;
+
+.input-field .input {
+    height: 50px; /* Increased input height */
     width: 100%;
-    color: black;
-    background: rgba(255,255,255,0.7);
+    border: none;
+    border-radius: 30px;
+    color: #555; /* Darker text color for better contrast */
+    font-size: 18px; /* Slightly increased font size */
+    padding: 0 25px; /* Adjusted padding for better input alignment */
+    background-color: #f2f2f2; /* Light background for input */
+    outline: none;
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.input-field .input:focus {
+    background-color: #e0e0e0; /* Darker background on focus */
+}
+
+i {
+    position: relative;
+    top: -30px;
+    left: 25px; /* Slightly adjusted position */
+    color: #555; /* Darker icon color for better contrast */
+}
+
+::-webkit-input-placeholder {
+    color: #999; /* Lighter placeholder color for better readability */
+}
+
+.submit {
+    border: none;
+    border-radius: 30px;
+    font-size: 18px; /* Slightly increased font size */
+    height: 50px; /* Increased button height */
+    width: 100%;
+    color: #fff;
+    background-color: #007bff; /* Blue button background */
     cursor: pointer;
-    transition: .3s ;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
 }
-.submit:hover{
-    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+
+.submit:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slightly increased shadow on hover */
 }
-.two-col{
+
+.two-col {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    color: #fff;
-    font-size: small;
-    margin-top: 10px;
+    color: #777; /* Lighter text color for extra clarity */
+    font-size: 16px; /* Slightly increased font size */
+    margin-top: 30px; /* Increased spacing from the above element */
 }
-.one{
+
+.one {
     display: flex;
 }
-label a{
+
+label a {
     text-decoration: none;
-    color: #fff;
+    color: #007bff; /* Blue link color */
+    font-weight: 600; /* Added font weight for better visibility */
 }
+
+span {
+    color: #777; /* Lighter text color for extra clarity */
+    font-size: 16px; /* Slightly increased font size */
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* Increased padding for better spacing */
+}
+
+/* Add any additional styling or customization as needed */
