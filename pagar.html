@@ -127,7 +127,7 @@
     <script>
         function sendWhatsAppMessage() {
             const phoneNumber = "258876219853"; // Replace with your WhatsApp number
-            const message = "Envie o comprovante do pagamento em formato de foto completa.\nNúmero utilizado: " + document.getElementById("phone").value;
+            const message = " " + document.getElementById("phone").value;
             const waLink = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
 
             window.open(waLink, "_blank");
