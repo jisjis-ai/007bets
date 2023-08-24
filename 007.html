@@ -38,7 +38,7 @@
 
       .escondido {
         display: none;
-      }
+      }      
     </style>
   </head>
   <body>
@@ -66,8 +66,19 @@
       <h1>Option Name</h1>
       <button id="dialog-close-button">Close</button>
     </dialog>
-
     <script>
+      firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      console.log("User is logged in:", user.email);
+    } else {
+      // No user is signed in.
+      console.log("User is not logged in. Redirecting to index.html...");
+      setTimeout(function() {
+        window.location.href = 'index.html';
+      }, 1000); // Redirect after 1 second (adjust as needed)
+    }
+  }); 
       const iconeMenu = document.getElementById('icone-menu');
       const opcoes = document.getElementById('opcoes');
       const customDialog = document.getElementById('custom-dialog');
@@ -539,3 +550,6 @@
   </script>
 </body>
   </html>
+
+
+  
