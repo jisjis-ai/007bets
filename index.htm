@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>007SHOPING</title>
+    <style>
+        body {
+            background-color: black;
+            overflow: hidden;
+            position: relative; /* Para que os flocos de neve possam se mover pela tela inteira */
+        }
+
+        .snowflake {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+        }
+
+        .product {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .buy-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .description {
+            color: white;
+        }
+
+        .support-info {
+            color: white;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .testimonial {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .return-policy {
+            color: white;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .company-info {
+            color: white;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Função para criar flocos de neve aleatórios em toda a tela
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            snowflake.style.left = Math.random() * window.innerWidth + "px";
+            snowflake.style.top = Math.random() * window.innerHeight + "px";
+            snowflake.style.animationDuration = Math.random() * 5 + 2 + "s";
+            snowflake.style.opacity = Math.random();
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 8000);
+        }
+
+        // Criar flocos de neve periodicamente
+        setInterval(createSnowflake, 100);
+
+        // Função para abrir o link do WhatsApp com a mensagem personalizada
+        function openWhatsApp(productName) {
+            const message = `vim adiquirir ${productName}`;
+            const url = `https://wa.me/258876219853?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+
+    <div class="product">
+        <img src="i.png" alt="OWNERBETS">
+        <p class="description"</p> 
+        <p class="description" style="text-align: center;">
+    _          *PAGAMENTOS*       _
+
+    💰 *24HORAS      (250MZN)*
+
+    💰 *7DIAS       (500MZN)*
+
+    💰 *14DIAS     (1000MZN)*
+
+    💰 *30DIAS     (1500MZN)*
+
+    *Temos pacotes exclusivos pra o revendedor*
+</p>
+
+</p>
+        <p class="return-policy">Política de Devolução: **Caro cliente,**
+
+Sabemos que comprar na internet pode ser um desafio, por isso queremos garantir que você esteja satisfeito com sua compra.
+
+Se você não gostar do produto, poderá devolvê-lo em até 1 hora após o recebimento. O produto deve estar na embalagem original e sem sinais de uso.
+
+Após a devolução, você receberá um reembolso de 90% do valor da compra. O valor restante será retido para cobrir os custos de envio e processamento da devolução.
+
+Para solicitar a devolução, entre em contato conosco pelo e-mail [endereço de e-mail] ou pelo telefone [número de telefone].
+
+Estamos sempre à disposição para ajudá-lo.
+</p>
+        <button class="buy-button" onclick="openWhatsApp('OWNERBETS')">ADQUIRIR</button>
+    
+    <!-- Adicione mais produtos aqui -->
+
+    <div class="testimonial">
+        <p>Depoimento de um Cliente Satisfeito: "Adorei o produto! Ótima qualidade e entrega rápida."</p>
+    </div>
+
+    <div class="company-info">
+        Informações da Empresa: 007SHOPING - 1100, +258876219853, mozbots@contato.com etc.
+    </div>
+
+    <div class="support-info">
+        Para suporte, entre em contato pelo WhatsApp: <a href="https://wa.me/258876219853" style="color: white; text-decoration: underline;">+258 8762 19853</a>
+    </div>
+
+</body>
+</html>
